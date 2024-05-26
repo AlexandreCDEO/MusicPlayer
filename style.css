@@ -6,7 +6,143 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-    font-family: "Roboto", sans-serif;
+:root {
+    --body-bg: #0F0D13;
+    --player-bg: #2A2141;
+    --app-color: #E1E1E6;
 }
+
+body {
+    height: 100vh;
+
+    display: grid;
+    place-items: center;
+
+    font-family: "Roboto", sans-serif;
+    background: var(--body-bg);
+
+    color: var(--app-color);
+}
+
+.app {
+   display: grid;
+   grid-template-areas: 
+    "a b"
+    "a c";
+    gap: 2rem;
+}
+
+#player1 {
+    padding: 40px;
+    grid-area: a;
+}
+
+#player1 > img {
+    height: 190px;
+    width: 190px;
+    margin-bottom: 28px;
+}
+
+#player1 .controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-time-indicator {
+    height: 6px;
+    margin-top: 28px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+
+    margin-bottom: 8px;
+}
+
+.time-indicator{
+    height: 6px;
+    background-color: #D9D9D9;
+    opacity: 0.3;
+}
+
+.progress {
+    position: absolute;
+    top: 0;
+
+    width: 87%;
+    height: 6px;
+    background-color: #D9D9D9;
+    opacity: 0.8;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.time span {
+    font-size: 14px;
+    font-size: normal;
+    font-weight: 400;
+    line-height: 24px;
+    color: #C4C4CC;
+    opacity: 0.7;
+}
+
+#player2 {
+    grid-area: b;
+}
+
+#player3 {
+    grid-area: c;
+}
+
+.player {
+    background: var(--player-bg);
+    padding: 28px;
+    border-radius: 8px;
+}
+
+.player h1 {
+    font-size: 24px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 24px; 
+
+    margin-bottom: 12px;
+}
+
+.player > p {
+    margin-bottom: 28px;
+}
+.player p {
+    font-size: 19px;
+    font-style: normal;
+    line-height: 19px; 
+    font-weight: 400;
+    opacity: 0.67;
+}
+
+.player section {
+    width: 300px;
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.player section img {
+    height: 84px;
+    width: 84px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+
 
